@@ -1,7 +1,5 @@
 package aydin.firebasedemo;
 
-import java.io.IOException;
-
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.UserRecord;
 import javafx.event.ActionEvent;
@@ -9,9 +7,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
+import java.io.IOException;
+
 import static aydin.firebasedemo.DemoApp.scene;
 
-public class SecondaryController {
+public class ThirdController {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }

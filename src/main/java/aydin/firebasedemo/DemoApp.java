@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
 import com.google.auth.oauth2.GoogleCredentials;
@@ -35,10 +36,11 @@ public class DemoApp extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        // Initialize Firebase only once in the FirestoreContext
         fstore = contxtFirebase.firebase();
         fauth = FirebaseAuth.getInstance();
 
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("Third"));
         stage.setScene(scene);
         stage.show();
     }
@@ -55,6 +57,4 @@ public class DemoApp extends Application {
     public static void main(String[] args) {
         launch();
     }
-
-
 }
